@@ -1,0 +1,1 @@
+artifacts: ${hydra:runtime.output_dir}

@@ -1,0 +1,1 @@
+artifacts: ${oc.env:PROJECT_ROOT}/outputs

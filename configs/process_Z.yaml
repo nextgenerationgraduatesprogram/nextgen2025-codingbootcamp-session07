@@ -1,0 +1,2 @@
+_target_: src.processes.Rotate
+rotation: 35

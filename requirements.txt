@@ -1,0 +1,9 @@
+ipykernel
+opencv-python
+pandas
+matplotlib
+numpy
+pyyaml
+omegaconf
+python-dotenv
+hydra-core

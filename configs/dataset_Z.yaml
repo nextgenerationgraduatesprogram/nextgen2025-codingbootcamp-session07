@@ -1,0 +1,3 @@
+_target_: src.datasets.FashionMnist
+root: "${oc.env:PROJECT_ROOT}/data"
+regex: "*"

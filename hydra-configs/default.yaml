@@ -1,0 +1,4 @@
+defaults:
+  - dataset: dataset_A
+  - paths: paths
+  - process: process_A
