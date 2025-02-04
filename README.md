@@ -23,12 +23,12 @@ We create an environment the same way on Windows Command Line, however we use `.
 
 ```Bash
 python -m venv .venv
-.venv/Scripts/activate
+.venv/Scripts/activate # you might also need to use .venv\\Scripts\\activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-There can be some different variants of the command to activate depending on WSL, Git Bash, Command Prompt, PowerShell, etc. but the same structure remains.
+There can be some different variants of the command to activate depending on WSL, Git Bash, Command Prompt, PowerShell, etc. but the same structure remains (you can see these different options in the .venv/Scripts folder).
 
 
 ### Creating an environment using `conda`
@@ -50,17 +50,10 @@ conda remove -n .venv --all
 
 ## Create a .env file for storing environment variables
 
-Once you've loaded your virtual Python environment we're going to run the following commands in the command line.
+Please create a `.env` file by running the following Python script from the projects root directory.
 
 ```Bash
-python # to enter python
+python setup.py
 ```
 
-Then we're going to get the current directory of the project.
-
-```Python
-import os
-os.getcwd()
-```
-
-We're going to copy the output of this and create a file called `.env` in the root directory of the project and paste the directory into there in the format shown in `example.env`.
+This will create a `.env` file with the key PROJECT_ROOT=<dir> that we will use to ensure Python knows where to look for `src` files and construct paths relative to the projects root directory. You can see an example of this in the `example.env` file.
