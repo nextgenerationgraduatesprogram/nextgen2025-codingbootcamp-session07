@@ -56,4 +56,4 @@ Please create a `.env` file by running the following Python script from the proj
 python setup.py
 ```
 
-This will create a `.env` file with the key PROJECT_ROOT=<dir> that we will use to ensure Python knows where to look for `src` files and construct paths relative to the projects root directory. You can see an example of this in the `example.env` file.
+This will create a `.env` file with the key PROJECT_ROOT=... that we will use to ensure Python knows where to look for `src` files and construct paths relative to the projects root directory. You can see an example of this in the `example.env` file.

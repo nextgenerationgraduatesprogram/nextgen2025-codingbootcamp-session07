@@ -20,7 +20,7 @@ def main(args: List[str]) -> Any:
     args, unknown_args = parse_args(args)
 
     # load the configuration
-    # args.dataset = Path(PROJECT_ROOT).joinpath("configs").joinpath(args.dataset)
+    args.dataset = Path(PROJECT_ROOT).joinpath("configs").joinpath(args.dataset)
     dataset_cfg = OmegaConf.load(args.dataset)
 
     # load the configuration and build the dataset
@@ -39,10 +39,10 @@ def parse_args(args: List[str]) -> Tuple[List[str], List[str]]:
     )
     parser.add_argument("--dataset",
         required=True,
-        # choices=[
-        #     "dataset_A.yaml",
-        #     "dataset_B.yaml"
-        # ],
+        choices=[
+            "dataset_A.yaml",
+            "dataset_B.yaml"
+        ],
         type=str,
         help="Configuration file to use for the dataset."
     )

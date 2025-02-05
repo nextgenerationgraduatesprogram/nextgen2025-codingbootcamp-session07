@@ -33,22 +33,22 @@ def main(args: List[str]) -> Any:
     dataset = FashionMnist(cfg.root, str(cfg.regex))
 
     # load the processes to be applied to the item
-    # process = Rotate(int(cfg.rotation))
+    process = Rotate(int(cfg.rotation))
 
     # apply the process to the dataset
     for idx, (img, lbl) in enumerate(dataset):
         print(f"img {img.shape} with label {lbl}")
 
         # rotate the image
-        # img = process(img)
+        img = process(img)
 
         # save the image
         cv2.imwrite(cfg.artifacts.joinpath(f"{idx}.png"), img)
 
     # we can even write some metadata if we want about it
-    # if "note" in cfg:
-    #     with open(cfg.artifacts.joinpath("note.txt"), "w") as f:
-    #         f.write(cfg.note)
+    if "note" in cfg:
+        with open(cfg.artifacts.joinpath("note.txt"), "w") as f:
+            f.write(cfg.note)
 
 
 def parse_args(args: List[str]) -> Tuple[List[str], List[str]]:

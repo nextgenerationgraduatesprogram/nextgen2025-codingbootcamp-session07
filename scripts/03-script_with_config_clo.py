@@ -30,7 +30,7 @@ def main(args: List[str]) -> Any:
     # load the configuration and build the dataset
     # NOTE: we need to be careful about types with overrides : can cause a bit of a headache
     # print(cfg.regex, type(cfg.regex)) # want a str
-    dataset = FashionMnist(cfg.root, cfg.regex)
+    dataset = FashionMnist(cfg.root, str(cfg.regex))
 
     # apply the process to the dataset
     for idx, (img, lbl) in enumerate(dataset):
